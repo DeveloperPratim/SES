@@ -1,10 +1,7 @@
-# coding: utf-8
-get_ipython().system('pip install git+https://github.com/huggingface/transformers.git@72958fcd3c98a7afdc61f953aa58c544ebda2f79')
-
-get_ipython().system('pip install git+https://github.com/casper-hansen/AutoAWQ.git@1c5ccc791fa2cb0697db3b4070df1813f1736208')
-
-get_ipython().system('pip install autoawq')
-
-get_ipython().system('pip install googlesearch-python')
-
-get_ipython().system('pip install pandas openpyxl')
+git+https://github.com/huggingface/transformers.git@72958fcd3c98a7afdc61f953aa58c544ebda2f79
+git+https://github.com/casper-hansen/AutoAWQ.git@1c5ccc791fa2cb0697db3b4070df1813f1736208
+autoawq
+googlesearch-python
+pandas
+openpyxl
+gradio
