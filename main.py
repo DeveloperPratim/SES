@@ -1,4 +1,4 @@
-# coding: utf-8
+
 import aiohttp
 import asyncio
 import hashlib
@@ -278,17 +278,17 @@ def evaluate_answer(question, answer, full_marks=5, expected_answer=None):
 
     prompt = f"""
     Question: {question}
-    Answer: {answer}
+    Answer (Answer given by Student): {answer}
     Full Marks: {full_marks}
     """
 
     if expected_answer:
-        prompt += f"Expected Answer: {expected_answer}\n"
+        prompt += f"Expected Answer (for getting full marks): {expected_answer}\n"
 
     # Evaluation instructions
     prompt += """
-    Evaluate based on strictly: Correctness of answer, Completeness of answer, Clarity, Depth, and Relevance of answer , if answer not according to asked question or giving nearly similar answer just give it a 0 marks.
-
+    Evaluate based on strictly: Length of answer, Correctness of answer, Completeness of answer, Clarity, Depth, and Relevance of answer , if answer not according to asked question or giving nearly similar answer just give it a 0 marks.
+    For all very very small answer non numerical answer with word count less than 10, or if the answer is not fully detailed as per question then give 0 marks  or not fully correct answer , assign a low score or 0 .
     Return JSON with:
     - marks_obtained
     - feedback  ( detailed overall feedback )
